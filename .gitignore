@@ -6,3 +6,7 @@ cache
 
 # IDE specific
 .idea
+
+
+dist
+yarn-error.log
