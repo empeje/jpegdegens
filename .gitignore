@@ -10,3 +10,5 @@ cache
 
 dist
 yarn-error.log
+
+.env
