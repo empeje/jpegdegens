@@ -13,6 +13,7 @@
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.4",
     "hardhat": "^2.9.1",
+    "hardhat-gas-reporter": "^1.0.8",
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.2.8",
     "ts-node": "^10.7.0",
