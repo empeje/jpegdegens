@@ -25,8 +25,9 @@ contract B {
 
     function setB(uint _a) public {
         a = _a;
-
-        A(ContractA).setA(_a + 1);
+        ContractA.delegatecall(
+            abi.encodeWithSignature("setA(uint256)", _a + 1)
+        );
     }
 
     function getB() public view returns (uint) {
