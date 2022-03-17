@@ -11,9 +11,17 @@ async function deploy(name, ...args){
     return fallback;
 }
 
+async function printStorage(contract, name, count) {
+    for (let i = 0; i < count; i++) {
+        console.log(name, i, await ethers.provider.getStorageAt(contract.address, i));
+    }
+}
+
 async function fallback() {
     const a = await deploy("A");
     const b = await deploy("B", a.address)
+
+    await printStorage(b,"B", 3);
 
     console.log("A", await a.getA());
     console.log("B", await b.getB());

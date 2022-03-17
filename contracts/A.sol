@@ -16,11 +16,16 @@ contract A {
 }
 
 contract B {
+    uint8 c;
     uint b;
+    uint8 d;
     address ContractA;
 
     constructor(address _A) {
         ContractA = _A;
+        b = 4;
+        c = 0x45;
+        d = 0xF5;
     }
 
     function setB(uint _b) public {
