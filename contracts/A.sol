@@ -16,21 +16,21 @@ contract A {
 }
 
 contract B {
-    uint a;
+    uint b;
     address ContractA;
 
     constructor(address _A) {
         ContractA = _A;
     }
 
-    function setB(uint _a) public {
-        a = _a;
+    function setB(uint _b) public {
+        b = _b;
         ContractA.delegatecall(
-            abi.encodeWithSignature("setA(uint256)", _a + 1)
+            abi.encodeWithSignature("setA(uint256)", _b + 1)
         );
     }
 
     function getB() public view returns (uint) {
-        return a;
+        return b;
     }
 }
