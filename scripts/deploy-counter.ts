@@ -6,6 +6,8 @@ async function deploy(){
     const counter = await Counter.deploy();
     await counter.deployed();
 
+    console.log(counter.address);
+
     return counter;
 }
 
